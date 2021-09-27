@@ -2,7 +2,7 @@
 session_start();
  
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.html");
+    header("location: login.php");
     exit;
 }
 ?>
@@ -31,7 +31,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <a class="btn btn-primary btn-xl" href="logout.html">Logout</a>
+                        <a class="btn btn-primary btn-xl" href="logout.php">Logout</a>
                     </ul>
                 </div>
             </div>

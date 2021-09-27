@@ -2,11 +2,11 @@
 session_start();
  
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: codigo.html");
+    header("location: codigo.php");
     exit;
 }
  
-require_once "config.html";
+require_once "config.php";
  
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -46,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
                             
-                            header("location: codigo.hmtl");
+                            header("location: codigo.php");
                         } else{
                             $login_err = "Password inválida.";
                         }
